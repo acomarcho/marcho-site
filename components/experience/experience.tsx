@@ -35,7 +35,7 @@ const Experience = () => {
   const tutorContent = (
     <>
       <p>
-        I tutored various courses for 166 undergraduate informatics students including <strong>Programming Fundamentals</strong>, <strong>Algorithm & Data Structure</strong>, <strong>Object Oriented Programming</strong>, <strong>Algorithm Strategies</strong>, <strong>Database</strong>, and <strong>Computational Logic</strong>
+        I tutored various courses for 166 undergraduate informatics students including <strong>Programming Fundamentals</strong>, <strong>Algorithm & Data Structure</strong>, <strong>Object Oriented Programming</strong>, <strong>Algorithm Strategies</strong>, <strong>Database</strong>, and <strong>Computational Logic</strong>.
       </p>
     </>
   )
