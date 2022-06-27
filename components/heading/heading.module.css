@@ -1,0 +1,26 @@
+.imageContainer img {
+  width: 100%;
+}
+
+.textContainer {
+  margin-top: 30px;
+}
+
+.textContainer p {
+  margin-top: 9px;
+  text-align: justify;
+}
+
+.textContainer p:first-of-type {
+  margin-top: 15px;
+}
+
+.iconContainer {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.buttonContainer {
+  margin-top: 15px;
+}

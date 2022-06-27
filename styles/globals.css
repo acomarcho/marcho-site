@@ -1,16 +1,58 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --background: #F5F7FA;
+  --white: #ffffff;
+  --black: #000000;
+  --darkgrey: #4D4D4D;
+  --mblue: #0671E0;
+  --sky: #dbedff;
+  --inter: 'Inter', sans-serif;
+  --shadow-6:  0px 6px 12px rgba(171, 190, 209, 0.3);
+  --shadow-4: 0px 4px 8px rgba(171, 190, 209, 0.4);
+  --shadow-2: 0px 2px 4px rgba(171, 190, 209, 0.6);
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, button:focus {
+  outline: none;
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: var(--inter);
+  color: var(--black);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: var(--inter);
+  color: var(--darkgrey);
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--inter);
+  color: var(--darkgrey);
 }

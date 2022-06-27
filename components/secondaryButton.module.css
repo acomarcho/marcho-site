@@ -1,0 +1,16 @@
+.secondaryButton, .secondaryButton:focus {
+  border: 2px solid var(--mblue);
+  border-radius: 4px;
+  display: block;
+  padding: 16px 32px;
+  color: var(--darkgrey);
+  font-weight: 600;
+  transition: all 0.3s linear;
+  font-size: 16px;
+}
+
+.secondaryButton:hover {
+  cursor: pointer;
+  background: var(--mblue);
+  color: var(--white);
+}

@@ -1,0 +1,19 @@
+.iconCircle {
+  border-radius: 100%;
+  background: var(--white);
+  box-shadow: var(--shadow-4);
+  text-decoration: none;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s linear;
+}
+
+.iconCircle img {
+  color: var(--black);
+}
+
+.iconCircle:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
