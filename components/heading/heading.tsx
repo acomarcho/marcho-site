@@ -9,7 +9,7 @@ const Heading = () => {
       <Image src="/stock.png" alt="profile picture" width={800} height={800} />
     </div>
     <div className={styles.textContainer}>
-      <h1>Hello, I'm Marcho!</h1>
+      <h1>Hello, I&apos;m Marcho!</h1>
       <p>I am an <strong>undergraduate informatics student</strong> at <strong>Bandung Institute of Technology</strong> with a passion in <strong>web development.</strong></p>
       <p>Click on the icon/buttons to learn more about me!</p>
       <div className={styles.iconContainer}>

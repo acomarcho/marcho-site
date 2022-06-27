@@ -1,0 +1,48 @@
+.accordionHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chevronContainer {
+  width: 22px;
+  height: 12.5px;
+  transition: all 0.1s linear;
+}
+
+.chevronContainer:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.chevronContainer img {
+  color: var(--mblue);
+  transition: all 0.1s linear;
+}
+
+.chevronContainer.rotate180 img {
+  transform: rotate(180deg);
+}
+
+.accordionContent {
+  margin-top: 9px;
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: var(--shadow-4);
+  padding: 0px;
+  transition: all 0.1s linear;
+  overflow: hidden;
+  height: 0px;
+}
+
+.open {
+  position: relative;
+}
+
+.accordionContent p {
+  text-align: justify;
+}
+
+.resizeableContent {
+  padding: 15px;
+}

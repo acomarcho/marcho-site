@@ -1,0 +1,14 @@
+.experienceContainer {
+  margin-top: 45px;
+}
+
+.accordionsContainer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttonContainer {
+  margin-top: 15px;
+}
