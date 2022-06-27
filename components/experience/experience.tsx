@@ -32,6 +32,14 @@ const Experience = () => {
     </>
   );
 
+  const tutorContent = (
+    <>
+      <p>
+        I tutored various courses for 166 undergraduate informatics students including <strong>Programming Fundamentals</strong>, <strong>Algorithm & Data Structure</strong>, <strong>Object Oriented Programming</strong>, <strong>Algorithm Strategies</strong>, <strong>Database</strong>, and <strong>Computational Logic</strong>
+      </p>
+    </>
+  )
+
   return (
     <div className={styles.experienceContainer}>
       <div className={styles.headingContainer}>
@@ -43,6 +51,9 @@ const Experience = () => {
         </Accordion>
         <Accordion title="QA Intern @ Pintarnya">
           {QAContent}
+        </Accordion>
+        <Accordion title="Tutor @ HMIF ITB">
+          {tutorContent}
         </Accordion>
       </div>
     </div>
