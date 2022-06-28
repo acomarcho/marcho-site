@@ -12,7 +12,7 @@ const MainPage = () => {
   return (
     <>
       <Head>
-        <title>Marcho's Site</title>
+        <title>Marcho&apos;s Site</title>
       </Head>
       <Wrapper>
         <>
