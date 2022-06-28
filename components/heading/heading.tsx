@@ -6,7 +6,7 @@ import SecondaryButton from "../secondaryButton";
 const Heading = () => {
   return <div className={styles.headingContainer} id="home">
     <div className={styles.imageContainer}>
-      <Image src="/stock.png" alt="profile picture" width={800} height={800} />
+      <Image src="/marcho.jpg" alt="profile picture" width={800} height={800} />
     </div>
     <div className={styles.textContainer}>
       <h1>Hello, I&apos;m Marcho!</h1>
