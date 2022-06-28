@@ -91,6 +91,16 @@ const Slider = () => {
     };
   });
 
+  useEffect(() => {
+    if (currentIndex === firstIndex) {
+      setContainerHeight(firstRef.current!.getBoundingClientRect().height);
+    } else if (currentIndex === secondIndex) {
+      setContainerHeight(secondRef.current!.getBoundingClientRect().height);
+    } else {
+      setContainerHeight(thirdRef.current!.getBoundingClientRect().height);
+    }
+  }, [currentIndex, firstIndex, secondIndex, thirdIndex])
+
   const getSliders = () => {
     /* Returns [leftRef, centerRef, rightRef] */
     let leftRef: RefObject<HTMLDivElement> | null = null;
@@ -160,11 +170,9 @@ const Slider = () => {
     centerRef.current!.className = `${styles.sliderContent} ${styles.left}`;
     rightRef.current!.className = `${styles.sliderContent}`;
 
-    setContainerHeight(rightRef.current!.getBoundingClientRect().height);
-
     let nextIndex = getNextIndex();
-    updateIndexes(nextIndex);
     setCurrentIndex(nextIndex);
+    updateIndexes(nextIndex);
   };
 
   const handlePrev = () => {
@@ -174,11 +182,9 @@ const Slider = () => {
     centerRef.current!.className = `${styles.sliderContent} ${styles.right}`;
     rightRef.current!.className = `${styles.sliderContent} ${styles.left}`;
 
-    setContainerHeight(leftRef.current!.getBoundingClientRect().height);
-
     let prevIndex = getPrevIndex();
-    updateIndexes(prevIndex);
     setCurrentIndex(prevIndex);
+    updateIndexes(prevIndex);
   };
 
   const getPrevIndex = (ci: number = currentIndex) => {
