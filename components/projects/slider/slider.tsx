@@ -6,28 +6,47 @@ import { useState, useRef, RefObject, useEffect } from "react";
 const contents = [
   {
     image: "/codykit.png",
-    text: "A static website made for CodyKit. This project was made with React alongside some animation libraries.",
+    content: (
+      <p>
+        A <strong>static website</strong> made for CodyKit. This project was
+        made with <strong>React</strong> alongside some{" "}
+        <strong>animation libraries</strong>.
+      </p>
+    ),
     href: "https://www.codykit.id",
   },
   {
-    image: "/codykit.png",
-    text: "Lorem ipsum this is the second page. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, aut!",
-    href: "https://www.codykit.id",
+    image: "/pvt.png",
+    content: (
+      <p>
+        A <strong>fullstack website</strong> made for Psychomotor Vigilante Taks
+        tests. This project was made with <strong>Next with TypeScript</strong> with a backend
+        connecting to the <strong>Google Sheets API</strong>.
+      </p>
+    ),
+    href: "https://pvt-demo.vercel.app/",
   },
   {
-    image: "/codykit.png",
-    text: "Lorem ipsum this is the third page. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, sequi.",
-    href: "https://www.codykit.id",
+    image: "/daily-wins.png",
+    content: (
+      <p>
+        A <strong>fullstack website</strong> made to track your daily wins. 
+        This project was made with <strong>React</strong> as a frontend and an <strong>Express</strong> backend
+        connecting to a <strong>PostgreSQL</strong> database hosted at <strong>Heroku</strong>.
+        It has an authentication system that uses <strong>JWT</strong>.
+      </p>
+    ),
+    href: "https://daily-wins.vercel.app/"
   },
   {
-    image: "/codykit.png",
-    text: "Lorem ipsum this is the fourth page. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, sequi.",
-    href: "https://www.codykit.id",
-  },
-  {
-    image: "/codykit.png",
-    text: "Lorem ipsum this is the fifth page. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, sequi.",
-    href: "https://www.codykit.id",
+    image: "/kata-baku.png",
+    content: (
+      <p>
+        A <strong>vanilla JS</strong> website styled with <strong>SCSS</strong> for Indonesian students
+        preparing for university entrance exams specifically at memorizing correct form of Indonesian words.
+      </p>
+    ),
+    href: "https://acomarcho.github.io/kataBaku/"
   },
 ];
 
@@ -50,9 +69,9 @@ const Slider = () => {
 
   const [dimensions, setDimensions] = useState({
     height: 0,
-    width: 0
+    width: 0,
   });
- 
+
   useEffect(() => {
     function handleResize() {
       setDimensions({
@@ -139,7 +158,7 @@ const Slider = () => {
     centerRef.current!.className = `${styles.sliderContent} ${styles.left}`;
     rightRef.current!.className = `${styles.sliderContent}`;
 
-    setContainerHeight(centerRef.current!.getBoundingClientRect().height);
+    setContainerHeight(rightRef.current!.getBoundingClientRect().height);
 
     let nextIndex = getNextIndex();
     updateIndexes(nextIndex);
@@ -153,7 +172,7 @@ const Slider = () => {
     centerRef.current!.className = `${styles.sliderContent} ${styles.right}`;
     rightRef.current!.className = `${styles.sliderContent} ${styles.left}`;
 
-    setContainerHeight(centerRef.current!.getBoundingClientRect().height);
+    setContainerHeight(leftRef.current!.getBoundingClientRect().height);
 
     let prevIndex = getPrevIndex();
     updateIndexes(prevIndex);
@@ -184,7 +203,7 @@ const Slider = () => {
           </div>
           <div></div>
           <div className={styles.sliderInfo}>
-            <p>{contents[firstIndex].text}</p>
+            {contents[firstIndex].content}
           </div>
           <div className={styles.sliderButton}>
             <PrimaryButton
@@ -204,7 +223,7 @@ const Slider = () => {
           </div>
           <div></div>
           <div className={styles.sliderInfo}>
-            <p>{contents[secondIndex].text}</p>
+            {contents[secondIndex].content}
           </div>
           <div className={styles.sliderButton}>
             <PrimaryButton
@@ -223,7 +242,7 @@ const Slider = () => {
           </div>
           <div></div>
           <div className={styles.sliderInfo}>
-            <p>{contents[thirdIndex].text}</p>
+            {contents[thirdIndex].content}
           </div>
           <div className={styles.sliderButton}>
             <PrimaryButton
