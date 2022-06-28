@@ -20,8 +20,8 @@ const contents = [
     content: (
       <p>
         A <strong>fullstack website</strong> made for Psychomotor Vigilante Taks
-        tests. This project was made with <strong>Next with TypeScript</strong> with a backend
-        connecting to the <strong>Google Sheets API</strong>.
+        tests. This project was made with <strong>Next with TypeScript</strong>{" "}
+        with a backend connecting to the <strong>Google Sheets API</strong>.
       </p>
     ),
     href: "https://pvt-demo.vercel.app/",
@@ -30,23 +30,25 @@ const contents = [
     image: "/daily-wins.png",
     content: (
       <p>
-        A <strong>fullstack website</strong> made to track your daily wins. 
-        This project was made with <strong>React</strong> as a frontend and an <strong>Express</strong> backend
-        connecting to a <strong>PostgreSQL</strong> database hosted at <strong>Heroku</strong>.
+        A <strong>fullstack website</strong> made to track your daily wins. This
+        project was made with <strong>React</strong> as a frontend and an{" "}
+        <strong>Express</strong> backend connecting to a{" "}
+        <strong>PostgreSQL</strong> database hosted at <strong>Heroku</strong>.
         It has an authentication system that uses <strong>JWT</strong>.
       </p>
     ),
-    href: "https://daily-wins.vercel.app/"
+    href: "https://daily-wins.vercel.app/",
   },
   {
     image: "/kata-baku.png",
     content: (
       <p>
-        A <strong>vanilla JS</strong> website styled with <strong>SCSS</strong> for Indonesian students
-        preparing for university entrance exams specifically at memorizing correct form of Indonesian words.
+        A <strong>vanilla JS</strong> website styled with <strong>SCSS</strong>{" "}
+        for Indonesian students preparing for university entrance exams
+        specifically at memorizing correct form of Indonesian words.
       </p>
     ),
-    href: "https://acomarcho.github.io/kataBaku/"
+    href: "https://acomarcho.github.io/kataBaku/",
   },
 ];
 
@@ -199,7 +201,12 @@ const Slider = () => {
           ref={firstRef}
         >
           <div className={styles.sliderImage}>
-            <Image src={contents[firstIndex].image} width={1225} height={776} />
+            <Image
+              src={contents[firstIndex].image}
+              alt="project image"
+              width={1225}
+              height={776}
+            />
           </div>
           <div></div>
           <div className={styles.sliderInfo}>
@@ -219,6 +226,7 @@ const Slider = () => {
               src={contents[secondIndex].image}
               width={1225}
               height={776}
+              alt="project image"
             />
           </div>
           <div></div>
@@ -238,7 +246,12 @@ const Slider = () => {
           ref={thirdRef}
         >
           <div className={styles.sliderImage}>
-            <Image src={contents[thirdIndex].image} width={1225} height={776} />
+            <Image
+              src={contents[thirdIndex].image}
+              width={1225}
+              height={776}
+              alt="project image"
+            />
           </div>
           <div></div>
           <div className={styles.sliderInfo}>
@@ -254,7 +267,12 @@ const Slider = () => {
       </div>
       <div className={styles.navigationContainer}>
         <button onClick={handlePrev}>
-          <Image src="/chevron-left.svg" width={15} height={26} />
+          <Image
+            src="/chevron-left.svg"
+            alt="chevron-left"
+            width={15}
+            height={26}
+          />
         </button>
         <div className={styles.circlesContainer}>
           {contents.map((_, idx) => {
@@ -274,12 +292,18 @@ const Slider = () => {
                   updateIndexes(idx);
                   setCurrentIndex(idx);
                 }}
+                key={idx}
               ></div>
             );
           })}
         </div>
         <button onClick={handleNext}>
-          <Image src="/chevron-right.svg" width={15} height={26} />
+          <Image
+            src="/chevron-right.svg"
+            alt="chevron-right"
+            width={15}
+            height={26}
+          />
         </button>
       </div>
     </>
