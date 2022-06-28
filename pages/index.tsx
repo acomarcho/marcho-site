@@ -6,20 +6,26 @@ import Contact from "../components/contact/contact";
 import Footer from "../components/footer/footer";
 import ScrollToTop from "../components/scrollToTop";
 import Navbar from "../components/navbar/navbar";
+import Head from "next/head";
 
 const MainPage = () => {
   return (
-    <Wrapper>
-      <>
-        <Navbar />
-        <Heading />
-        <Experience />
-        <Projects />
-        <Contact />
-        <Footer />
-        <ScrollToTop />
-      </>
-    </Wrapper>
+    <>
+      <Head>
+        <title>Marcho's Site</title>
+      </Head>
+      <Wrapper>
+        <>
+          <Navbar />
+          <Heading />
+          <Experience />
+          <Projects />
+          <Contact />
+          <Footer />
+          <ScrollToTop />
+        </>
+      </Wrapper>
+    </>
   );
 };
 
