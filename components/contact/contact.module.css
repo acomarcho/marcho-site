@@ -14,3 +14,11 @@
   align-items: center;
   gap: 15px;
 }
+
+.contactInfo a {
+  transition: all 0.3s linear;
+}
+
+.contactInfo a:hover {
+  padding-left: 9px;
+}
