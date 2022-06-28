@@ -53,10 +53,15 @@ const Navbar = () => {
         <div className={styles.linksHeightContainer} ref={heightRef}>
           {links.map((link, idx) => {
             return (
-              <div className={styles.link} key={idx} onClick={() => {
-                setIsToggled(false);
-              }}>
-                <a href={link.href}>{link.text}</a>
+              <div className={styles.link} key={idx}>
+                <a
+                  href={link.href}
+                  onClick={() => {
+                    setIsToggled(false);
+                  }}
+                >
+                  {link.text}
+                </a>
               </div>
             );
           })}

@@ -39,13 +39,14 @@
   border-bottom: 1px solid rgba(171, 190, 209, 0.5);
   font-family: var(--inter);
   z-index: 999;
-  transition: all 0.3s linear;
 }
 
 .link a {
   color: var(--darkgrey);
+  display: block;
+  transition: all 0.3s linear;
 }
 
-.link:hover {
+.link a:hover {
   transform: translateX(5px);
 }
