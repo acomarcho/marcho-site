@@ -76,12 +76,14 @@ const Slider = () => {
 
   useEffect(() => {
     function handleResize() {
+      const [leftRef, centerRef, rightRef] = getSliders();
+
       setDimensions({
         height: window.innerHeight,
         width: window.innerWidth,
       });
 
-      setContainerHeight(secondRef.current?.getBoundingClientRect().height!);
+      setContainerHeight(centerRef.current?.getBoundingClientRect().height!);
     }
 
     window.addEventListener("resize", handleResize);
