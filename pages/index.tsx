@@ -13,6 +13,7 @@ const MainPage = () => {
     <>
       <Head>
         <title>Marcho&apos;s Site</title>
+        <meta name="description" content="Marchotridyo's personal site. A fullstack web developer that loves making stuffs and learning new things." />
       </Head>
       <Wrapper>
         <>
