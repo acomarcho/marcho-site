@@ -4,7 +4,7 @@ import Icon from "./icon";
 import SecondaryButton from "../secondaryButton";
 
 const Heading = () => {
-  return <div className={styles.headingContainer}>
+  return <div className={styles.headingContainer} id="home">
     <div className={styles.imageContainer}>
       <Image src="/stock.png" alt="profile picture" width={800} height={800} />
     </div>

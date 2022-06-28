@@ -41,7 +41,7 @@ const Experience = () => {
   )
 
   return (
-    <div className={styles.experienceContainer}>
+    <div className={styles.experienceContainer} id="experience">
       <div className={styles.headingContainer}>
         <h1>Work Experience</h1>
       </div>

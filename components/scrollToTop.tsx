@@ -10,14 +10,14 @@ const ScrollToTop = () => {
     const handleScroll = () => {
       setScrollHeight(document.documentElement.scrollTop);
       setDocumentHeight(document.documentElement.clientHeight);
-    } 
+    };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    }
-  })
+    };
+  });
 
   return (
     <div
@@ -25,11 +25,15 @@ const ScrollToTop = () => {
       onClick={() => {
         window.scrollTo({ top: 0, left: 0 });
       }}
-      style={scrollHeight > documentHeight ? {display: "grid"} : {display: "none"}}
+      style={
+        scrollHeight > documentHeight
+          ? { display: "grid" }
+          : { display: "none" }
+      }
     >
       <Image
         src="/chevron-up.svg"
-        alt="chevron-down"
+        alt="chevron-up"
         width={22}
         height={12.5}
       />

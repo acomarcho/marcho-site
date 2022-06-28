@@ -2,7 +2,7 @@ import styles from './contact.module.css'
 import Image from 'next/image'
 
 const Contact = () => {
-  return <div className={styles.contactContainer}>
+  return <div className={styles.contactContainer} id="contact">
     <div className={styles.headingContainer}>
       <h1>Contact Me</h1>
     </div>
