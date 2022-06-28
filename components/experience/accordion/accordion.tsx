@@ -39,7 +39,7 @@ const Accordion = (props: { title: string; children: JSX.Element, open?: boolean
         <h2>{props.title}</h2>
         <div
           className={
-            isOpen
+            !isOpen
               ? `${styles.chevronContainer}`
               : `${styles.chevronContainer} ${styles.rotate180}`
           }
