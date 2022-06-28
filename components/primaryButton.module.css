@@ -1,7 +1,7 @@
 .primaryButton, .primaryButton:focus {
   background: var(--mblue);
   border-radius: 4px;
-  display: block;
+  display: inline-block;
   padding: 16px 32px;
   color: var(--white);
   font-size: 16px;
