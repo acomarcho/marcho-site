@@ -12,7 +12,7 @@ const Experience = () => {
         designs myself too using <strong>Figma</strong>.
       </p>
       <div className={styles.buttonContainer}>
-        <PrimaryButton href="/" text="See featured projects" />
+        <PrimaryButton href="/#projects" text="See featured projects" newTab={false} />
       </div>
     </>
   );
