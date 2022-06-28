@@ -243,7 +243,7 @@ const Slider = () => {
           </div>
           <div className={styles.sliderButton}>
             <PrimaryButton
-              text="Visit Project"
+              text="Visit project"
               href={contents[secondIndex].href}
             />
           </div>
