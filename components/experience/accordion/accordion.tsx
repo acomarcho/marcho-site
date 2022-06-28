@@ -8,7 +8,9 @@ const Accordion = (props: { title: string; children: JSX.Element, open?: boolean
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setContentHeight(contentRef.current!.getBoundingClientRect().height);
+    setTimeout(() => {
+      setContentHeight(contentRef.current!.getBoundingClientRect().height);
+    }, 100);
   }, [])
 
   const [dimensions, setDimensions] = useState({
@@ -23,7 +25,9 @@ const Accordion = (props: { title: string; children: JSX.Element, open?: boolean
         width: window.innerWidth,
       });
 
-      setContentHeight(contentRef.current!.getBoundingClientRect().height);
+      setTimeout(() => {
+        setContentHeight(contentRef.current!.getBoundingClientRect().height);
+      }, 100);
     }
 
     window.addEventListener("resize", handleResize);
