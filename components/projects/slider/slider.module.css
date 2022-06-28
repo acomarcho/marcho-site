@@ -1,0 +1,66 @@
+.sliderContainer {
+  position: relative;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.sliderInfo {
+  margin-top: 9px;
+}
+
+.sliderButton {
+  margin-top: 15px;
+}
+
+.sliderContent {
+  position: absolute;
+  transition: all 0.3s linear;
+  z-index: 2;
+}
+
+.sliderContent.left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.sliderContent.right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.navigationContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.circlesContainer {
+  display: flex;
+  gap: 9px;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  background: var(--sky);
+  border-radius: 28px;
+  transition: all 0.3s linear;
+}
+
+.circle:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.circle.active {
+  background: var(--mblue);
+}
+
+.navigationContainer button {
+  transition: all 0.3s linear;
+}
+
+.navigationContainer button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

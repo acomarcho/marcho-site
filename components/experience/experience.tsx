@@ -46,7 +46,7 @@ const Experience = () => {
         <h1>Work Experience</h1>
       </div>
       <div className={styles.accordionsContainer}>
-        <Accordion title="Freelance Web Developer">
+        <Accordion title="Freelance Web Developer" open={true}>
           {freelanceContent}
         </Accordion>
         <Accordion title="QA Intern @ Pintarnya">

@@ -2,9 +2,14 @@ import { useState, useRef, useEffect } from "react";
 import styles from "./accordion.module.css";
 import Image from "next/image";
 
-const Accordion = (props: { title: string; children: JSX.Element }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Accordion = (props: { title: string; children: JSX.Element, open?: boolean }) => {
+  const [isOpen, setIsOpen] = useState(props.open || false);
+  const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setContentHeight(contentRef.current!.getBoundingClientRect().height);
+  }, [])
 
   const [dimensions, setDimensions] = useState({
     height: 0,
@@ -17,6 +22,8 @@ const Accordion = (props: { title: string; children: JSX.Element }) => {
         height: window.innerHeight,
         width: window.innerWidth,
       });
+
+      setContentHeight(contentRef.current!.getBoundingClientRect().height);
     }
 
     window.addEventListener("resize", handleResize);
@@ -50,7 +57,7 @@ const Accordion = (props: { title: string; children: JSX.Element }) => {
         className={styles.accordionContent}
         style={
           isOpen
-            ? { height: contentRef.current?.getBoundingClientRect().height }
+            ? { height: contentHeight }
             : { height: 0 }
         }
       >
