@@ -1,0 +1,17 @@
+.footerContainer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: var(--mblue);
+  margin-top: 45px;
+}
+
+.footerContainer p {
+  text-align: center;
+  color: var(--white);
+}
+
+.footerContainer p span {
+  color: var(--mred);
+}

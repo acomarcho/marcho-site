@@ -1,0 +1,16 @@
+.contactContainer {
+  margin-top: 45px;
+}
+
+.contactsContainer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
