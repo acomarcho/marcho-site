@@ -62,4 +62,5 @@ p {
   line-height: 24px;
   font-family: var(--inter);
   color: var(--darkgrey);
+  text-align: justify;
 }
