@@ -24,7 +24,7 @@ const contents = [
         with a backend connecting to the <strong>Google Sheets API</strong>.
       </p>
     ),
-    href: "https://pvt-demo.vercel.app/",
+    href: "https://pvt-online.vercel.app/",
   },
   {
     image: "/daily-wins.png",
